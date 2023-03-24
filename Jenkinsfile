@@ -3,15 +3,6 @@
 pipeline {
     agent any
     stages {
-        
-        stage('build') {
-            steps {
-                script {
-                    echo "Building the application..."
-                }
-            }
-        }
-        
         stage('Clone repository') { 
             steps { 
                 script{
@@ -19,13 +10,22 @@ pipeline {
                 }
             }
         }
-        stage('test') {
-            steps {
-                script {
-                    echo "Testing the application..."
-                }
-            }
-        }
+//         stage('build') {
+//             steps {
+//                 script {
+//                     echo "Building the application..."
+//                 }
+//             }
+//         }
+        
+        
+//         stage('test') {
+//             steps {
+//                 script {
+//                     echo "Testing the application..."
+//                 }
+//             }
+//         }
         stage('deploy') {
             steps {
                 script {
