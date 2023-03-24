@@ -3,10 +3,19 @@
 pipeline {
     agent none
     stages {
+        
         stage('build') {
             steps {
                 script {
                     echo "Building the application..."
+                }
+            }
+        }
+        
+        stage('Clone repository') { 
+            steps { 
+                script{
+                checkout scm
                 }
             }
         }
