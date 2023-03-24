@@ -8,6 +8,13 @@ pipeline {
         maven 'maven-3.9'
     }
     stages {
+        stage('Clone repository') { 
+            steps { 
+                script{
+                checkout scm
+                }
+            }
+        }
         stage("init") {
             steps {
                 script {
