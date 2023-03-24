@@ -5,16 +5,9 @@ def gv
 pipeline {
     agent any
     tools {
-        maven 'maven-3.9'
+        maven 'Maven'
     }
     stages {
-        stage('Clone repository') { 
-            steps { 
-                script{
-                checkout scm
-                }
-            }
-        }
         stage("init") {
             steps {
                 script {
