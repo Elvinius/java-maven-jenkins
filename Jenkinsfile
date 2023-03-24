@@ -10,13 +10,14 @@ pipeline {
                 }
             }
         }
-//         stage('build') {
-//             steps {
-//                 script {
-//                     echo "Building the application..."
-//                 }
-//             }
-//         }
+        stage('build') {
+            steps {
+                script {
+                    echo "Building the application..."
+                     sh 'mvn clean package'
+                }
+            }
+        }
         
         
 //         stage('test') {
