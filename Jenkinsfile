@@ -24,6 +24,7 @@ pipeline {
                     def customImage = docker.build("my-app")
                     // push image
                     customImage.push("1.0")
+                    }
                 }
             }
         }
